@@ -1,0 +1,380 @@
+:root {
+    --brand-main: #6366f1; 
+    --brand-glow: #06b6d4;  
+    --surface-light: #f8fafc;
+    --text-main: #0f172a;
+    --text-alt: #475569;
+    --motion-fast: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-navigation {
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background-color: rgba(15, 23, 42, 0.8) !important; 
+}
+
+i.menu-icon-size {
+    font-size: 26px;
+    color: var(--brand-glow);
+}
+
+.navigation-logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white !important;
+}
+
+.navigation-burger:focus {
+    box-shadow: none;
+}
+
+.navigation-anchor {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    color: white !important;
+}
+
+.navigation-anchor::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--brand-main), var(--brand-glow));
+    transition: width 0.3s;
+}
+
+.navigation-anchor:hover::before {
+    width: 55%;
+}
+
+.navigation-item-wrap a.active-status::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 55%;
+    height: 2px;
+    background: linear-gradient(to right, var(--brand-main), var(--brand-glow));
+}
+
+@media (max-width:992px) {
+    .navigation-menu-box {
+        background-color: rgba(15, 23, 42, 0.95);
+        padding: 10px;
+    }
+
+    .navigation-item-wrap a.active-status {
+        color: var(--brand-glow) !important;
+    }
+
+    .navigation-anchor:hover {
+        color: var(--brand-glow) !important;
+    }
+
+    .navigation-anchor::before {
+        display: none !important;
+    }
+}
+
+.hero-presentation {
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.dark-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(88, 28, 135, 0.75));
+}
+
+.hero-presentation h1 {
+    font-size: 4.5rem;
+}
+
+.hero-presentation h3 {
+    font-size: 2.5rem;
+}
+
+@media (max-width:767px) {
+    .hero-presentation h1 {
+        font-size: 3rem;
+    }
+    .hero-presentation h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.biography-section {
+    padding: 4rem 0;
+    background-color: var(--surface-light);
+}
+
+.biography-section .premium-box-card {
+    padding: 3rem 1rem;
+    background-color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.custom-metric-bar {
+    height: 0.8rem;
+    border-radius: 50px;
+}
+
+.custom-metric-bar-fill {
+    background: linear-gradient(to right, var(--brand-main), var(--brand-glow));
+}
+
+.features-grid .feature-card-block {
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    background-color: #fff;
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    padding: 2.5rem 1.5rem;
+    transition: var(--motion-fast);
+}
+
+.features-grid .feature-card-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+}
+
+.features-grid .feature-card-block .icon-wrapper-shape {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 6px solid var(--brand-main);
+    margin-bottom: 1rem;
+    transition: background-color 0.5s;
+}
+
+.features-grid .feature-card-block:hover .icon-wrapper-shape {
+    background-color: var(--brand-main);
+    border: 6px solid rgba(6, 182, 212, 0.3);
+}
+
+.features-grid i {
+    font-size: 34px;
+    color: var(--brand-main);
+    transition: var(--motion-fast);
+}
+
+.features-grid .feature-card-block:hover i {
+    color: white;
+}
+
+.features-grid .feature-card-block h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.features-grid .feature-card-block p {
+    color: var(--text-alt);
+}
+
+@media (max-width:991px) and (min-width:768px) {
+    .features-grid .feature-card-block h3 {
+        font-size: 1rem;
+    }
+}
+
+.metrics-counter-banner {
+    position: relative;
+    background-image: url(../images/post-3.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 8rem 0;
+    color: white;
+}
+
+.metrics-counter-banner .dark-backdrop {
+    background: linear-gradient(135deg, var(--brand-main), var(--brand-glow));
+    opacity: 0.8;
+}
+
+.metrics-counter-banner .numerical-display span:first-of-type {
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.4);
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.metrics-counter-banner .numerical-display i {
+    color: white;
+}
+
+.showcase-gallery .gallery-media-item img {
+    transition: transform 0.7s;
+}
+
+.showcase-gallery .gallery-media-item:hover img {
+    transform: scale(1.15);
+}
+
+.showcase-gallery .info-segment-meta p {
+    font-size: 0.8rem;
+}
+
+.showcase-gallery .info-segment-meta span {
+    color: var(--brand-main);
+}
+
+.showcase-gallery .info-segment-meta i {
+    cursor: pointer;
+    color: var(--brand-main);
+}
+
+.user-feedback-carousel {
+    background-image: url(../images/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    padding: 8rem 0;
+    position: relative;
+}
+
+.user-feedback-carousel .dark-backdrop {
+    background-color: #0f172a;
+    opacity: 0.85;
+}
+
+.carousel-indicators {
+    bottom: -20px;
+}
+
+.carousel-indicators button {
+    border-radius: 50% !important;
+    width: 12px !important;
+    height: 12px !important;
+    background-color: #fff !important;
+}
+
+.carousel-indicators .active {
+    background-color: var(--brand-glow) !important;
+}
+
+@media (min-width:768px) {
+    .user-feedback-carousel .caption-slide-text > p {
+        padding: 0 5rem;
+    }
+}
+
+@media (min-width:992px) {
+    .user-feedback-carousel .caption-slide-text > p {
+        padding: 0 8rem;
+    }
+}
+
+@media (min-width:1200px) {
+    .user-feedback-carousel .caption-slide-text > p {
+        padding: 0 13rem;
+    }
+}
+
+.card-body .badge-action-title {
+    background-color: var(--brand-main) !important;
+}
+
+.card-body .badge-action-title h3 {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 7px 15px;
+    text-transform: uppercase;
+}
+
+.card-body a h5 {
+    transition: color 0.3s ease-in-out;
+}
+
+.card-body a:hover h5 {
+    color: var(--brand-glow);
+}
+
+.magazine-feed .author-link-wrap a {
+    transition: color 0.3s ease-in-out;
+    color: var(--text-alt) !important;
+}
+
+.magazine-feed .author-link-wrap a:hover {
+    color: var(--brand-glow) !important;
+}
+
+.magazine-feed .author-link-wrap img {
+    width: 30px;
+    height: 30px;
+}
+
+.connect-section {
+    background-image: url(../images/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    padding: 8rem 0 0;
+    position: relative;
+}
+
+.connect-section .dark-backdrop {
+    background-color: #0f172a;
+    opacity: 0.9;
+}
+
+.dispatch-action button {
+    border-radius: 8px !important;
+    background: linear-gradient(to right, var(--brand-main), var(--brand-glow)) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 30px !important;
+    font-weight: 600;
+    transition: var(--motion-fast);
+}
+
+.dispatch-action button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3) !important;
+}
+
+.touch-ico i {
+    color: var(--brand-main);
+}
+
+.social-icon-box {
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s;
+    border: 2px solid var(--brand-main);
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon-box:hover {
+    background-color: var(--brand-main);
+    border-color: rgba(6, 182, 212, 0.5);
+}
+
+.social-icon-box i {
+    font-size: 18px;
+    color: var(--brand-main);
+}
+    
+.social-icon-box:hover i {
+    color: white;
+}
